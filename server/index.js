@@ -3,7 +3,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const ExpenseRecordsRouter = require("./routes/ExpenseRecords")
-const cors = require('cors');
+const cors = require('cors'); //Cross origin resource sharing
 
 const app = express()
 const port = process.env.PORT || 3001;

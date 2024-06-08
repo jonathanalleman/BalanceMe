@@ -3,6 +3,8 @@ const ExpenseRecordModel = require("../schema/ExpenseRecord")
 
 const router = express.Router();
 
+
+//Get Expense Records by user ID
 router.get("/getAllByUserID/:userId", async (req, res) => {
   try {
     const userId = req.params.userId;
@@ -16,6 +18,7 @@ router.get("/getAllByUserID/:userId", async (req, res) => {
   }
 });
 
+//Create new expense record
 router.post("/", async (req, res) => {
   try {
     const newRecordBody = req.body;
@@ -28,6 +31,7 @@ router.post("/", async (req, res) => {
   }
 });
 
+//Update existing record
 router.put("/:id", async (req, res) => {
   try {
     const id = req.params.id;
@@ -46,6 +50,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+//Delete expense record
 router.delete("/:id", async (req, res) => {
   try {
     const id = req.params.id;
